@@ -1,0 +1,7 @@
+"""
+message showing git pull done
+now adding,commiting this file
+and then pushing to master branch 
+
+
+"""
