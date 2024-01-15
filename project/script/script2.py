@@ -2,37 +2,32 @@ import requests
 from requests.exceptions import Timeout
 
 
-@classmethod
 def employees_json():
         response = requests.get("https://dummy.restapiexample.com/api/v1/employees")
         json_response = response.json()
         return json_response
 
-
-@classmethod       
+       
 def employees_successful_get():
         response = requests.get("https://dummy.restapiexample.com/api/v1/employees")
         return (f"{response} error in get")
 
 
-@classmethod
 def employees_unsuccessful_get():
         response = requests.get("https://dummy.restapiexample.com/api/v1/employees")
         return (f"{response} error in get")
 
-
-@classmethod      
+      
 def employees_get_with_timeout():
         response = requests.get("https://dummy.restapiexample.com/api/v1/employees", Timeout = 0.001)
         return response
 
 
-@classmethod
 def employees_malperformed_url():
         response = requests.get("http://www.thiswebsitedoesnotexist.com")
         return response
 
-@classmethod
+
 def get_employees(employee_id):
     response = requests.get(f"https://dummy.restapiexample.com/api/v1/employees{employee_id}")
     if response.status_code == 200:

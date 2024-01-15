@@ -5,11 +5,10 @@ import unittest
 from requests.exceptions import HTTPError, Timeout
 from requests.exceptions import RequestException
 
-
-
 script = os.path.dirname(__file__)
 project = os.path.abspath(os.path.join(script, '..'))
 sys.path.append(project)
+
 from script import script2
 
 
